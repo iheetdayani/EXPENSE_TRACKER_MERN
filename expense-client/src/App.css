@@ -1,0 +1,97 @@
+/* ===== Expense Tracker Background ===== */
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #1e293b;
+
+  background:
+    radial-gradient(circle at 10% 10%,
+      rgba(96, 165, 250, 0.22),
+      transparent 35%),
+    radial-gradient(circle at 90% 85%,
+      rgba(167, 139, 250, 0.20),
+      transparent 35%),
+    linear-gradient(135deg,
+      #f0f7ff 0%,
+      #f8faff 45%,
+      #eef2ff 100%);
+
+  background-attachment: fixed;
+}
+
+/* Main app container */
+#root {
+  min-height: 100vh;
+}
+
+/* Page spacing */
+.app-container {
+  min-height: 100vh;
+  padding: 30px 0;
+}
+
+/* White cards for forms and expenses */
+.card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(30, 41, 59, 0.08);
+  backdrop-filter: blur(10px);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Subtle hover effect */
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 35px rgba(30, 41, 59, 0.12);
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #172554;
+  font-weight: 700;
+}
+
+/* Primary buttons */
+.btn-primary {
+  background: linear-gradient(135deg, #2563eb, #4f46e5);
+  border: none;
+  border-radius: 9px;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #1d4ed8, #4338ca);
+  transform: translateY(-1px);
+}
+
+/* Form inputs */
+.form-control,
+.form-select {
+  border: 1px solid #dbe3ef;
+  border-radius: 9px;
+  padding: 10px 12px;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.14);
+}
+
+/* Mobile spacing */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 18px 12px;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+}

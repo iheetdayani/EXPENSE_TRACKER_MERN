@@ -1,0 +1,16 @@
+POST http://localhost:5000/api/Expenses
+Content-Type: application/json
+
+{
+  "title": "Petrol",
+  "amount": 1200,
+  "category": "Travel",
+  "date": "2026-10-15",
+  "paymentMethod": "UPI",
+  "description": "Petrol for my bike"
+}
+###
+GET http://localhost:5000/api/Expenses
+
+###
+GET http://localhost:5000/api/Expenses/6ad253357897b9cbe4fbf549
